@@ -25,7 +25,7 @@ func main() {
 	flag.Parse()
 
 	if verbose {
-		fmt.Println("Be chatty...")
+		fmt.Println("I'm chatty...")
 	}
 }
 ```
@@ -40,12 +40,12 @@ import (
 	"github.com/hgfischer/go-bfmt"
 )
 
-var verbose bfmt.Bool
+var verbose = bfmt.Bool(false)
 
 func main() {
-	flag.BoolVar((bool)(&verbose), "v", false, "Enable verbose output")
+	flag.Var(&verbose, "v", "Enable verbose output")
 	flag.Parse()
 
-	verbose.Println("Be chatty...")
+	verbose.Println("I'm chatty...")
 }
 ```
