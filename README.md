@@ -4,6 +4,8 @@
 
 This is a package that wraps most functions present in the `fmt` package with a boolean conditional.
 
+Docs can be found at http://godoc.org/github.com/hgfischer/go-bfmt
+
 ## Introduction
 
 If you ever needed to write code like this:
