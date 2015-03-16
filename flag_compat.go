@@ -1,10 +1,11 @@
-// flag.Getter compatibility
 package bfmt
 
 import (
 	"fmt"
 	"strconv"
 )
+
+// The following are for providing flag.Getter compatibility
 
 func (b *Bool) Set(s string) error {
 	v, err := strconv.ParseBool(s)
