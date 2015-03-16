@@ -11,10 +11,16 @@ If you ever needed to write code like this:
 ```
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"flag"
+)
+
+var verbose bool
 
 func main() {
-	verbose := true
+	flag.BoolVar(&verbose, "v", false, "Enable verbose output")
+	flag.Parse()
 
 	if verbose {
 		fmt.Println("Be chatty...")
@@ -27,10 +33,17 @@ Then you can now use `go-bfmt` to do this:
 ```
 package main
 
-import "github.com/hgfischer/go-bfmt"
+import (
+	"flag"
+	"github.com/hgfischer/go-bfmt"
+)
+
+var verbose bfmt.Bool
 
 func main() {
-	verbose := bfmt.Bool(true)
+	flag.BoolVar((bool)(&verbose), "v", false, "Enable verbose output")
+	flag.Parse()
+
 	verbose.Println("Be chatty...")
 }
 ```
