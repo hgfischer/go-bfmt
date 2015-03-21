@@ -93,3 +93,8 @@ $(GODOCDOWN): check_gopath check_gobin
 .PHONY: doc
 doc: $(GODOCDOWN)
 	@godocdown $(PKG) > GODOC.md
+
+
+.PHONY: fmt
+fmt:
+	@gofmt -s -w .
