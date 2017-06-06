@@ -1,6 +1,6 @@
-[![Build Status](https://drone.io/github.com/hgfischer/go-bfmt/status.png)](https://drone.io/github.com/hgfischer/go-bfmt/latest)
-
 # bfmt
+
+[![Build Status](https://travis-ci.org/hgfischer/go-bfmt.svg?branch=master)](https://travis-ci.org/hgfischer/go-bfmt)
 
 This is a package that wraps most functions present in the `fmt` package with a boolean conditional.
 
